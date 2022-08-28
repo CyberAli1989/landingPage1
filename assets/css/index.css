@@ -1,0 +1,562 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+body,
+html {
+  font-family: Vazirmatn UI FD;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.wave:before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 100px;
+  background-image: url(../img/wave.png);
+  background-size: 100% 100%;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: transparent;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid;
+  color: #FFFCFF;
+  z-index: 0;
+}
+.button:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #5F23A5;
+  transition: 1s ease;
+  top: -1em;
+  left: -1em;
+}
+.button:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #5F23A5;
+  transition: 1s ease;
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+.button:hover {
+  color: #FFFCFF;
+}
+.button:hover:before {
+  height: 410px;
+  width: 410px;
+}
+.button:hover:after {
+  height: 410px;
+  width: 410px;
+}
+.button:active {
+  filter: brightness(0.5);
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+.ping {
+  animation: ping 0.8s ease-in-out infinite both;
+}
+
+#goTop {
+  position: fixed;
+  bottom: 25px;
+  z-index: 20;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: #0E0F26;
+  color: #FFFCFF;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+header {
+  height: 100vh;
+  max-height: 100vh;
+  background-image: url(../img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+header:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header nav {
+  height: fit-content;
+  border-bottom: 1px solid #FFFCFF;
+}
+header nav #mobileMenu {
+  display: none;
+}
+header nav ul li a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  background-color: #5F23A5;
+  color: #FFFCFF;
+  border-radius: 5px;
+}
+header nav ul li a.active {
+  width: 100%;
+  height: 100%;
+  background-color: #5F23A5;
+  color: #fff;
+  border-radius: 5px;
+}
+header nav.stick {
+  margin: 0 auto;
+  background-color: #0E0F26;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+}
+header nav.stick ul li a {
+  color: #FFFCFF;
+}
+header nav.stick ul li a.active {
+  color: #fff;
+}
+header nav .logo {
+  width: 50px;
+  display: block;
+}
+header nav .logo img {
+  width: 100%;
+}
+header #headContent {
+  position: relative;
+  z-index: 10;
+  color: #FFFCFF;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+header #headContent h3 {
+  font-size: 2.5em;
+}
+header #headContent h1 {
+  font-size: 3.5em;
+}
+header #headContent p {
+  font-size: 1em;
+}
+
+#home {
+  min-height: fit-content;
+}
+
+#about {
+  width: 100%;
+  min-height: fit-content;
+}
+#about .title {
+  margin: 15px 0;
+  text-align: center;
+}
+#about .title h2 {
+  font-size: 3em;
+  margin: 15px 0;
+  font-weight: 800;
+}
+#about .title h4 {
+  font-size: 2em;
+  margin: 15px 0;
+}
+#about .title span {
+  display: block;
+  width: 5%;
+  margin: 25px auto;
+  height: 2px;
+  background-color: #5F23A5;
+}
+#about .title p {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1em;
+  color: #7F7F7F;
+  line-height: 2;
+}
+#about #aboutBox {
+  margin: 25px auto;
+  text-align: center;
+}
+#about #aboutBox .box {
+  border: 1px solid #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+#about #aboutBox .box .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid #0E0F26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about #aboutBox .box .title h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #000;
+}
+#about #aboutBox .box .desc {
+  font-size: 1em;
+  color: #7F7F7F;
+}
+#about #aboutBox .box span {
+  display: block;
+  margin: 25px auto;
+  width: 15%;
+  height: 3px;
+  background-color: #5F23A5;
+}
+
+#skill {
+  width: 100%;
+  min-height: fit-content;
+}
+#skill .skillContainer {
+  background-color: #F6F6F6;
+}
+#skill .skillContainer #skillImg {
+  height: 100%;
+  overflow: hidden;
+}
+#skill .skillContainer #skillImg img {
+  width: 100%;
+}
+#skill .skillContainer .box {
+  height: 100%;
+  box-shadow: 0 5px 15px #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+#skill .skillContainer .box .title {
+  margin: 30px;
+}
+#skill .skillContainer .box .title h1 {
+  color: #000;
+  margin-bottom: 15px;
+}
+#skill .skillContainer .box .title p {
+  color: #7F7F7F;
+  font-size: 1em;
+  line-height: 2;
+}
+#skill .skillContainer .box .skillBar {
+  display: flex;
+  align-items: center;
+}
+#skill .skillContainer .box .skillBar span {
+  margin: 0 10px;
+  display: inline-block;
+}
+#skill .skillContainer .box .skillBar .skillName {
+  width: 60px;
+  height: 24px;
+}
+#skill .skillContainer .box .skillBar .bar {
+  width: 80%;
+  height: 24px;
+  background-color: #ddd;
+  border-radius: 15px;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+#skill .skillContainer .box .skillBar .bar .progressPhp {
+  margin: 0;
+  display: block;
+  position: absolute;
+  height: 24px;
+  background-color: #7377ad;
+  animation: PHP 1s linear;
+  width: 50%;
+}
+#skill .skillContainer .box .skillBar .bar .progressHtml {
+  margin: 0;
+  display: block;
+  position: absolute;
+  height: 24px;
+  background-color: #dd4b25;
+  animation: Html 1s linear;
+  width: 100%;
+}
+#skill .skillContainer .box .skillBar .bar .progressCss {
+  margin: 0;
+  display: block;
+  position: absolute;
+  height: 24px;
+  background-color: #254bdd;
+  animation: Css 1s linear;
+  width: 80%;
+}
+@keyframes PHP {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes Html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes Css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+#services {
+  min-height: fit-content;
+}
+#services .title {
+  text-align: center;
+}
+#services .title h2 {
+  font-size: 3em;
+  color: #000;
+}
+#services .title span {
+  margin: 0 10px;
+  width: 3%;
+  display: inline-block;
+  height: 1px;
+  background-color: #5F23A5;
+}
+#services .title p {
+  display: inline-block;
+  color: #7F7F7F;
+  font-size: 1em;
+}
+#services .box {
+  border: 1px solid #d5d5d5;
+  padding: 15px;
+  border-radius: 10px;
+}
+#services .box .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid #0E0F26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#services .box .title h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #000;
+}
+#services .box .desc {
+  font-size: 1em;
+  color: #7F7F7F;
+}
+#services .box span {
+  display: block;
+  margin: 25px auto;
+  width: 15%;
+  height: 3px;
+  background-color: #5F23A5;
+}
+
+#achivment {
+  height: fit-content;
+  background-image: url("../img/achivment.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+}
+#achivment:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#achivment #count {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#achivment #count .box {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+#achivment #count .box .icon {
+  margin: 25px auto;
+  width: 58px;
+  height: 58px;
+  color: #FFFCFF;
+  border-radius: 50%;
+}
+#achivment #count .box .icon i {
+  font-size: 3em;
+  line-height: 58px;
+}
+#achivment #count .box .title {
+  color: #FFFCFF;
+}
+#achivment #count .box .count {
+  margin: 25px 0;
+  color: #FFFCFF;
+}
+#achivment #count .box .count h2 {
+  font-size: 3em;
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 2em !important;
+  }
+  h2 {
+    font-size: 1.5em !important;
+  }
+  h3 {
+    font-size: 1em !important;
+  }
+  .wave:before {
+    height: 40px;
+  }
+  nav #mobileMenu {
+    display: block !important;
+    font-size: 18px;
+    color: #fff;
+  }
+  nav.mobileMenu {
+    background-color: #FFFCFF !important;
+  }
+  nav.mobileMenu #mobileMenu {
+    display: block !important;
+    font-size: 18px;
+    color: #0E0F26;
+  }
+  nav ul.nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #FFFCFF;
+    text-align: center;
+    z-index: 99;
+  }
+  nav ul.nav li {
+    width: 100%;
+  }
+  nav ul.nav li a {
+    display: block;
+    color: #000;
+    width: 100%;
+  }
+  nav ul.nav li a.active {
+    width: 100%;
+    border-radius: 0;
+  }
+  nav.stick.mobileMenu {
+    background-color: #0E0F26 !important;
+  }
+  nav.stick #mobileMenu {
+    color: #fff;
+  }
+  nav.stick ul {
+    background-color: #0E0F26;
+    height: 100vh;
+  }
+  nav.stick ul.nav li a {
+    display: block;
+    color: #FFFCFF;
+    width: 100%;
+  }
+  nav.stick ul.nav li a.active {
+    width: 100%;
+    border-radius: 0;
+  }
+  section {
+    display: block;
+    min-height: 100vh !important;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

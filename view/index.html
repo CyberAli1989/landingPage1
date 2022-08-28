@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="Fa">
+<html lang="Fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,18 +10,22 @@
     <link rel="stylesheet" href="../node_modules/vazirmatn/misc/UI-Farsi-Digits/Vazirmatn-UI-FD-font-face.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="../assets/css/index.css">
     <!--    scripts  -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/aos/dist/aos.js"></script>
     <script src="../assets/js/home.js"></script>
 </head>
-<body data-bs-smooth-scroll="true" data-bs-target="#navigation" tabindex="0" data-bs-spy="scroll" dir="rtl">
+<body>
 
 <div id="goTop">
     <i class="fa fa-angle-up fa-2x"></i>
 </div>
-<header id="home">
+<span data-bs-smooth-scroll="true" data-bs-target="#navigation" data-bs-root-margin="-40% 0px" tabindex="0"
+      data-bs-spy="scroll">
+<header class="mb-5" id="home">
     <nav class="navbar" id="navigation">
         <div class="container">
             <a href="index.html" class="logo">
@@ -89,25 +93,305 @@
         </div>
     </div>
 </header>
-<section id="about">
-    <div class="container">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium expedita incidunt pariatur
-            voluptatibus. Ab ad assumenda aut dolor expedita fugit in laudantium modi non placeat porro, qui repudiandae
-            voluptas voluptate?
-        </p>
+<div class="wave pb-4"></div>
+<section data-aos="fade-up" id="about">
+    <div class="container pt-3">
+        <div class="title">
+            <h2>به شرکت ما خوش آمدید</h2>
+            <h4>ما کیستیم و چه کاری انجام میدهیم</h4>
+            <span> </span>
+            <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده
+                شناخت فراوان جامعه و متخصصان
+            </p>
+        </div>
+        <div id="aboutBox">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-ruler-64.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>طراحی خلاقانه</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-brand-58.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>برند سازی</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-notebook-64.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>طراحی وب سایت</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-<section id="contact">
-    <div class="container">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium expedita incidunt pariatur
-            voluptatibus. Ab ad assumenda aut dolor expedita fugit in laudantium modi non placeat porro, qui repudiandae
-            voluptas voluptate?
-        </p>
+<section data-aos="fade-up" id="skill">
+    <div class="skillContainer">
+        <div class="row">
+            <div data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos="fade-left" id="skillImg"
+                 class="col-md-6">
+                <img src="../assets/img/skill.jpg" alt="">
+            </div>
+            <div data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos="fade-right" class="col-md-6 p-4">
+                <div class="box">
+                    <div class="title">
+                        <h1>تلاش ما همواره ارائه خدمات باکیفیت است</h1>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                            تکنولوژی مورد نیاز و کاربردهای
+                        </p>
+                    </div>
+                    <div class="skillBar mb-3">
+                        <span class="skillName">PHP</span>
+                        <span class="bar">
+                            <span class="progressPhp"></span>
+                        </span>
+                        <span class="skillAmount">50%</span>
+                    </div>
+                    <div class="skillBar mb-3">
+                        <span class="skillName">HTML</span>
+                        <span class="bar">
+                            <span class="progressHtml"></span>
+                        </span>
+                        <span class="skillAmount">100%</span>
+                    </div>
+                    <div class="skillBar mb-3">
+                        <span class="skillName">CSS</span>
+                        <span class="bar">
+                            <span class="progressCss"></span>
+                        </span>
+                        <span class="skillAmount">80%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+<section data-aos="fade-up" id="services">
+    <div class="container mt-5">
+        <div class="title">
+            <h2>خدمات ما</h2>
+            <span></span><p>خدماتی که ارائه میدهیم</p><span></span>
+        </div>
+        <div class="service">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-notebook-64.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>طراحی خلاقانه</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-ruler-64.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>تجربه کاربر</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-ball-point-pen-58.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>سفارشی سازی</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-fast-58.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>تحویل سریع</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-responsive-58.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>کاملا واکنشگرا</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="../assets/img/icons8-windows-10-personalization-58.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="title">
+                            <h3>طراحی مدرن</h3>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-aos="fade-up" id="achivment">
+    <div class="container">
+        <div id="count">
+            <div class="row w-100">
+                <div class="col-md-3 my-5">
+                    <div class="box">
+                        <div class="icon">
+                <i class="fa fa-heart-o"></i>
+            </div>
+                        <div class="count">
+                                <h2 id="first">
 
+                </h2>
+                            </div>
+                        <div class="title">
+                <h4>مشتریان راضی</h4>
+            </div>
+                    </div>
+                </div>
+                <div class="col-md-3 my-5">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-shopping-bag"></i>
+                        </div>
+                        <div class="count">
+                                <h2 id="second">
+                                </h2>
+                            </div>
+                        <div class="title">
+                        <h4>پروژه های انجام شده</h4>
+            </div>
+                    </div>
+                </div>
+                <div class="col-md-3 my-5">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-download"></i>
+                        </div>
+                        <div class="count">
+                                <h2 id="third">
 
+                </h2>
+                            </div>
+                        <div class="title">
+                <h4>فایل های دانلود شده</h4>
+            </div>
+                    </div>
+                </div>
+                <div class="col-md-3 my-5">
+                    <div class="box">
+                        <div class="icon">
+                <i class="fa fa-code"></i>
+            </div>
+                        <div class="count">
+                                <h2 id="forth">
+
+                </h2>
+                            </div>
+                        <div class="title">
+                <h4>مشتریان راضی</h4>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</span>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

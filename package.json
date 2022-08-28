@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/CyberAli1989/landingPage1#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.1",
