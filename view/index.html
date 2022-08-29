@@ -12,19 +12,19 @@
     <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/filters.css">
     <!--    scripts  -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/aos/dist/aos.js"></script>
     <script src="../assets/js/home.js"></script>
 </head>
-<body>
+<body data-bs-smooth-scroll="true" data-bs-target="#navigation" data-bs-root-margin="-40% 0px" tabindex="0"
+      data-bs-spy="scroll">
 
 <div id="goTop">
     <i class="fa fa-angle-up fa-2x"></i>
 </div>
-<span data-bs-smooth-scroll="true" data-bs-target="#navigation" data-bs-root-margin="-40% 0px" tabindex="0"
-      data-bs-spy="scroll">
 <header class="mb-5" id="home">
     <nav class="navbar" id="navigation">
         <div class="container">
@@ -212,7 +212,8 @@
     <div class="container mt-5">
         <div class="title">
             <h2>خدمات ما</h2>
-            <span></span><p>خدماتی که ارائه میدهیم</p><span></span>
+            <span></span>
+            <p>خدماتی که ارائه میدهیم</p><span></span>
         </div>
         <div class="service">
             <div class="row">
@@ -329,16 +330,16 @@
                 <div class="col-md-3 my-5">
                     <div class="box">
                         <div class="icon">
-                <i class="fa fa-heart-o"></i>
-            </div>
+                            <i class="fa fa-heart-o"></i>
+                        </div>
                         <div class="count">
-                                <h2 id="first">
+                            <h2 id="first">
 
-                </h2>
-                            </div>
+                            </h2>
+                        </div>
                         <div class="title">
-                <h4>مشتریان راضی</h4>
-            </div>
+                            <h4>مشتریان راضی</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 my-5">
@@ -347,12 +348,12 @@
                             <i class="fa fa-shopping-bag"></i>
                         </div>
                         <div class="count">
-                                <h2 id="second">
-                                </h2>
-                            </div>
+                            <h2 id="second">
+                            </h2>
+                        </div>
                         <div class="title">
-                        <h4>پروژه های انجام شده</h4>
-            </div>
+                            <h4>پروژه های انجام شده</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 my-5">
@@ -361,35 +362,381 @@
                             <i class="fa fa-download"></i>
                         </div>
                         <div class="count">
-                                <h2 id="third">
+                            <h2 id="third">
 
-                </h2>
-                            </div>
+                            </h2>
+                        </div>
                         <div class="title">
-                <h4>فایل های دانلود شده</h4>
-            </div>
+                            <h4>فایل های دانلود شده</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 my-5">
                     <div class="box">
                         <div class="icon">
-                <i class="fa fa-code"></i>
-            </div>
+                            <i class="fa fa-code"></i>
+                        </div>
                         <div class="count">
-                                <h2 id="forth">
+                            <h2 id="forth">
 
-                </h2>
-                            </div>
+                            </h2>
+                        </div>
                         <div class="title">
-                <h4>مشتریان راضی</h4>
-            </div>
+                            <h4>مشتریان راضی</h4>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-</span>
+<section data-aos="fade-up" id="smaples">
+    <div class="container">
+        <div id="filtering" class="pb-4 pt-4">
+            <div class="container">
+                <div class="title mb-3">
+                    <h1>نمونه کارها</h1>
+                    <span></span>
+                    <p>پروژه های اخیر</p>
+                    <span></span>
+                </div>
+                <div class="btn-group mt-3 mb-4" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-filter active" data-cat="all">همه</button>
+                    <button type="button" class="btn btn-filter" data-cat="cat1">عنوان 1</button>
+                    <button type="button" class="btn btn-filter" data-cat="cat2">عنوان 2</button>
+                    <button type="button" class="btn btn-filter" data-cat="cat3">عنوان 3</button>
+                </div>
+                <div id="da-thumbs" class="da-thumbs">
+                    <div class="item cat1">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample1.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 1
+                                </p>
+                                <p class="h2">
+                                    عنوان
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item cat2">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample2.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 2
+                                </p>
+                                <p class="h2">
+                                    عنوان
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item cat2">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample2.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 2
+                                </p>
+                                <p class="h2">
+                                    عنوان
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item cat3">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample3.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 3
+                                </p>
+                                <p class="h2">
+                                    عنوان
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item cat3">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample3.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 3
+                                </p>
+                                <p class="h2">
+                                    عنوان
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item cat1">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample4.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 1
+                                </p>
+                                <p class="h2">
+                                    عنوان
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item cat1">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample4.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 1
+                                </p>
+                                <p class="h2">
+                                    عنوان
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-cat="cat3 cat1" class="item cat3 cat1">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample5.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 3 , 1
+                                </p>
+                                <p class="h2">
+                                    عنوان 1
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item cat2">
+                        <div class="box">
+                            <div class="img">
+                                <img src="../assets/img/sample2.jpg" alt="">
+                            </div>
+                            <div class="overlay">
+                                <p class="title">
+                                    عنوان اصلی 2
+                                </p>
+                                <p class="h2">
+                                    عنوان
+                                </p>
+                                <a href="#">
+                                    <i class="fa fa-link fa-rotate-90"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section data-aos="fade-up" id="tops">
+    <div class="topsContainer">
+        <div class="row">
+            <div data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos="fade-right" class="col-md-6 p-4">
+                <div class="box">
+                    <div class="title">
+                        <h1>چرا ما را انتخاب کنید ؟</h1>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                            تکنولوژی مورد نیاز و کاربردهای
+                        </p>
+                    </div>
+                    <div class="result">
+                        <div class="rTitle">
+                            <h3>دلیل اول</h3>
+                            <span class="rClose1">
+                                <i class="fa fa-minus"></i>
+                            </span>
+                        </div>
+                        <div class="rDesc r1">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی
+                            </p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="rTitle">
+                            <h3>دلیل دوم</h3>
+                            <span class="rClose2">
+                                <i class="fa fa-plus"></i>
+                            </span>
+                        </div>
+                        <div class="rDesc r2">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی
+                            </p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="rTitle">
+                            <h3>دلیل سوم</h3>
+                            <span class="rClose3">
+                                <i class="fa fa-plus"></i>
+                            </span>
+                        </div>
+                        <div class="rDesc r3">
+                            <p>
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos="fade-left" id="topsImg"
+                 class="col-md-6">
+                <img src="../assets/img/skill.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+<section data-aos="fade-up" id="team">
+    <div class="container pt-4 mt-4">
+        <div class="row">
+            <div class="col-md-3 mb-3 col-6">
+                <div class="profile">
+                    <div class="profileImg">
+                        <img src="../assets/img/icons8-test-account-58.png" alt="">
+                    </div>
+                    <div class="job">
+                        <p>name</p>
+                        <p>front-end</p>
+                    </div>
+                    <div class="icons">
+                        <a href="#">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 col-6">
+                <div class="profile">
+                    <div class="profileImg">
+                        <img src="../assets/img/icons8-test-account-58.png" alt="">
+                    </div>
+                    <div class="job">
+                        <p>name</p>
+                        <p>front-end</p>
+                    </div>
+                    <div class="icons">
+                        <a href="#">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 col-6">
+                <div class="profile">
+                    <div class="profileImg">
+                        <img src="../assets/img/icons8-test-account-58.png" alt="">
+                    </div>
+                    <div class="job">
+                        <p>name</p>
+                        <p>front-end</p>
+                    </div>
+                    <div class="icons">
+                        <a href="#">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3 col-6">
+                <div class="profile">
+                    <div class="profileImg">
+                        <img src="../assets/img/icons8-test-account-58.png" alt="">
+                    </div>
+                    <div class="job">
+                        <p>name</p>
+                        <p>front-end</p>
+                    </div>
+                    <div class="icons">
+                        <a href="#">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <script>
     AOS.init();
 </script>

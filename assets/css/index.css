@@ -115,9 +115,11 @@ html {
   background-color: #0E0F26;
   color: #FFFCFF;
   text-align: center;
-  line-height: 50px;
   cursor: pointer;
   border-radius: 50%;
+}
+#goTop i {
+  line-height: 45px;
 }
 
 header {
@@ -273,21 +275,40 @@ header #headContent p {
   background-color: #5F23A5;
 }
 
-#skill {
+#skill, #tops {
   width: 100%;
   min-height: fit-content;
 }
-#skill .skillContainer {
+#skill .skillContainer,
+#skill .topsContainer, #tops .skillContainer,
+#tops .topsContainer {
   background-color: #F6F6F6;
 }
-#skill .skillContainer #skillImg {
+#skill .skillContainer #skillImg,
+#skill .topsContainer #skillImg, #tops .skillContainer #skillImg,
+#tops .topsContainer #skillImg {
   height: 100%;
   overflow: hidden;
 }
-#skill .skillContainer #skillImg img {
+#skill .skillContainer #skillImg img,
+#skill .topsContainer #skillImg img, #tops .skillContainer #skillImg img,
+#tops .topsContainer #skillImg img {
   width: 100%;
 }
-#skill .skillContainer .box {
+#skill .skillContainer #topsImg,
+#skill .topsContainer #topsImg, #tops .skillContainer #topsImg,
+#tops .topsContainer #topsImg {
+  height: 100%;
+  overflow: hidden;
+}
+#skill .skillContainer #topsImg img,
+#skill .topsContainer #topsImg img, #tops .skillContainer #topsImg img,
+#tops .topsContainer #topsImg img {
+  width: 100%;
+}
+#skill .skillContainer .box,
+#skill .topsContainer .box, #tops .skillContainer .box,
+#tops .topsContainer .box {
   height: 100%;
   box-shadow: 0 5px 15px #ccc;
   border-radius: 8px;
@@ -295,31 +316,45 @@ header #headContent p {
   justify-content: center;
   align-items: center;
 }
-#skill .skillContainer .box .title {
+#skill .skillContainer .box .title,
+#skill .topsContainer .box .title, #tops .skillContainer .box .title,
+#tops .topsContainer .box .title {
   margin: 30px;
 }
-#skill .skillContainer .box .title h1 {
+#skill .skillContainer .box .title h1,
+#skill .topsContainer .box .title h1, #tops .skillContainer .box .title h1,
+#tops .topsContainer .box .title h1 {
   color: #000;
   margin-bottom: 15px;
 }
-#skill .skillContainer .box .title p {
+#skill .skillContainer .box .title p,
+#skill .topsContainer .box .title p, #tops .skillContainer .box .title p,
+#tops .topsContainer .box .title p {
   color: #7F7F7F;
   font-size: 1em;
   line-height: 2;
 }
-#skill .skillContainer .box .skillBar {
+#skill .skillContainer .box .skillBar,
+#skill .topsContainer .box .skillBar, #tops .skillContainer .box .skillBar,
+#tops .topsContainer .box .skillBar {
   display: flex;
   align-items: center;
 }
-#skill .skillContainer .box .skillBar span {
+#skill .skillContainer .box .skillBar span,
+#skill .topsContainer .box .skillBar span, #tops .skillContainer .box .skillBar span,
+#tops .topsContainer .box .skillBar span {
   margin: 0 10px;
   display: inline-block;
 }
-#skill .skillContainer .box .skillBar .skillName {
+#skill .skillContainer .box .skillBar .skillName,
+#skill .topsContainer .box .skillBar .skillName, #tops .skillContainer .box .skillBar .skillName,
+#tops .topsContainer .box .skillBar .skillName {
   width: 60px;
   height: 24px;
 }
-#skill .skillContainer .box .skillBar .bar {
+#skill .skillContainer .box .skillBar .bar,
+#skill .topsContainer .box .skillBar .bar, #tops .skillContainer .box .skillBar .bar,
+#tops .topsContainer .box .skillBar .bar {
   width: 80%;
   height: 24px;
   background-color: #ddd;
@@ -328,32 +363,50 @@ header #headContent p {
   overflow: hidden;
   position: relative;
 }
-#skill .skillContainer .box .skillBar .bar .progressPhp {
+#skill .skillContainer .box .skillBar .bar .progressPhp,
+#skill .topsContainer .box .skillBar .bar .progressPhp, #tops .skillContainer .box .skillBar .bar .progressPhp,
+#tops .topsContainer .box .skillBar .bar .progressPhp {
   margin: 0;
   display: block;
   position: absolute;
   height: 24px;
   background-color: #7377ad;
-  animation: PHP 1s linear;
   width: 50%;
 }
-#skill .skillContainer .box .skillBar .bar .progressHtml {
+#skill .skillContainer .box .skillBar .bar .progressPhp.php,
+#skill .topsContainer .box .skillBar .bar .progressPhp.php, #tops .skillContainer .box .skillBar .bar .progressPhp.php,
+#tops .topsContainer .box .skillBar .bar .progressPhp.php {
+  animation: PHP 1s linear;
+}
+#skill .skillContainer .box .skillBar .bar .progressHtml,
+#skill .topsContainer .box .skillBar .bar .progressHtml, #tops .skillContainer .box .skillBar .bar .progressHtml,
+#tops .topsContainer .box .skillBar .bar .progressHtml {
   margin: 0;
   display: block;
   position: absolute;
   height: 24px;
   background-color: #dd4b25;
-  animation: Html 1s linear;
   width: 100%;
 }
-#skill .skillContainer .box .skillBar .bar .progressCss {
+#skill .skillContainer .box .skillBar .bar .progressHtml.Html,
+#skill .topsContainer .box .skillBar .bar .progressHtml.Html, #tops .skillContainer .box .skillBar .bar .progressHtml.Html,
+#tops .topsContainer .box .skillBar .bar .progressHtml.Html {
+  animation: Html 1s linear;
+}
+#skill .skillContainer .box .skillBar .bar .progressCss,
+#skill .topsContainer .box .skillBar .bar .progressCss, #tops .skillContainer .box .skillBar .bar .progressCss,
+#tops .topsContainer .box .skillBar .bar .progressCss {
   margin: 0;
   display: block;
   position: absolute;
   height: 24px;
   background-color: #254bdd;
-  animation: Css 1s linear;
   width: 80%;
+}
+#skill .skillContainer .box .skillBar .bar .progressCss.css,
+#skill .topsContainer .box .skillBar .bar .progressCss.css, #tops .skillContainer .box .skillBar .bar .progressCss.css,
+#tops .topsContainer .box .skillBar .bar .progressCss.css {
+  animation: Css 1s linear;
 }
 @keyframes PHP {
   from {
@@ -378,6 +431,47 @@ header #headContent p {
   to {
     width: 80%;
   }
+}
+#skill .skillContainer .result,
+#skill .topsContainer .result, #tops .skillContainer .result,
+#tops .topsContainer .result {
+  border-radius: 8px;
+}
+#skill .skillContainer .result .rTitle,
+#skill .topsContainer .result .rTitle, #tops .skillContainer .result .rTitle,
+#tops .topsContainer .result .rTitle {
+  margin: 15px 0;
+  padding: 0 15px;
+  background-image: linear-gradient(to right, #302399, #5F23A5);
+  color: #FFFCFF;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#skill .skillContainer .result .rTitle h3,
+#skill .topsContainer .result .rTitle h3, #tops .skillContainer .result .rTitle h3,
+#tops .topsContainer .result .rTitle h3 {
+  margin-top: 5px;
+  font-size: 1.5em;
+}
+#skill .skillContainer .result .rTitle i:hover,
+#skill .topsContainer .result .rTitle i:hover, #tops .skillContainer .result .rTitle i:hover,
+#tops .topsContainer .result .rTitle i:hover {
+  cursor: pointer;
+}
+#skill .skillContainer .result .rDesc,
+#skill .topsContainer .result .rDesc, #tops .skillContainer .result .rDesc,
+#tops .topsContainer .result .rDesc {
+  width: 90%;
+  margin: 25px auto;
+}
+#skill .skillContainer .result .rDesc p,
+#skill .topsContainer .result .rDesc p, #tops .skillContainer .result .rDesc p,
+#tops .topsContainer .result .rDesc p {
+  font-size: 1em;
+  color: #7F7F7F;
+  line-height: 2;
 }
 
 #services {
@@ -437,10 +531,10 @@ header #headContent p {
 #achivment {
   height: fit-content;
   background-image: url("../img/achivment.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   position: relative;
 }
@@ -484,6 +578,165 @@ header #headContent p {
 }
 #achivment #count .box .count h2 {
   font-size: 3em;
+}
+
+#smaples {
+  min-height: fit-content;
+}
+#smaples #filtering .title {
+  text-align: center;
+}
+#smaples #filtering .title h1 {
+  font-size: 3em;
+}
+#smaples #filtering .title p {
+  margin: 15px 5px;
+  display: inline-block;
+  font-size: 1em;
+  color: #7F7F7F;
+}
+#smaples #filtering .title span {
+  display: inline-block;
+  background-color: #5F23A5;
+  height: 1px;
+  width: 3%;
+}
+#smaples #filtering .btn-group {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+  padding: 6px;
+}
+#smaples #filtering .btn-group .btn-filter {
+  color: #0E0F26;
+  transition: 300ms;
+  border: none;
+}
+#smaples #filtering .btn-group .btn-filter:hover {
+  border: none;
+  transform: translateY(-5px);
+}
+#smaples #filtering .btn-group .btn-filter.active {
+  color: #FFFCFF;
+  background-color: #5b4cd6;
+  border: 1px solid #5b4cd6;
+  border-radius: 25px;
+}
+#smaples #filtering .box {
+  position: relative;
+}
+#smaples #filtering .box .img {
+  width: 100%;
+  overflow: hidden;
+}
+#smaples #filtering .box .img img {
+  width: 100%;
+}
+#smaples #filtering .box .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #FFFCFF;
+  border: 1px solid #dddddd;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  transition: 300ms;
+  transform: scale(0);
+}
+#smaples #filtering .box .overlay .title {
+  color: #7F7F7F;
+  font-size: 1em;
+}
+#smaples #filtering .box .overlay a {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #dddddd;
+  margin: 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  color: #0E0F26;
+  transition: 150ms;
+}
+#smaples #filtering .box .overlay a:hover {
+  background-color: #5F23A5;
+  color: #FFFCFF;
+}
+#smaples #filtering .box .overlay a i {
+  text-align: center;
+  line-height: 42px;
+}
+#smaples #filtering .box:hover .overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#team {
+  min-height: fit-content;
+}
+#team .profile {
+  margin: 0 auto;
+  width: 250px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  transition: 300ms;
+}
+#team .profile .profileImg {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin: 15px auto;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#team .profile .job {
+  font-size: 1.3em;
+  color: #7F7F7F;
+}
+#team .profile .icons {
+  opacity: 0;
+  transition: 300ms;
+}
+#team .profile .icons a {
+  color: #7F7F7F;
+  text-decoration: none;
+  font-size: 1.3em;
+  margin: 0 10px;
+}
+#team .profile .icons a i {
+  transition: 300ms;
+}
+#team .profile .icons a i.fa-whatsapp:hover {
+  color: #3db74d;
+  transform: translateY(-5px);
+}
+#team .profile .icons a i.fa-instagram:hover {
+  color: #f60a5f;
+  transform: translateY(-5px);
+}
+#team .profile .icons a i.fa-github:hover {
+  color: #0E0F26;
+  transform: translateY(-5px);
+}
+#team .profile:hover {
+  box-shadow: 0 5px 15px #ddd;
+  transform: translateY(-5px);
+}
+#team .profile:hover .icons {
+  opacity: 1;
 }
 
 @media (max-width: 1000px) {
@@ -556,6 +809,15 @@ header #headContent p {
   section {
     display: block;
     min-height: 100vh !important;
+  }
+  #team .profile {
+    width: 100%;
+  }
+  #team .profile .icons {
+    opacity: 1;
+  }
+  #team .profile .icons a {
+    margin: 0 !important;
   }
 }
 

@@ -1,0 +1,22 @@
+
+.da-thumbs {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+/*-1000px width*/
+@media ( max-width: 1000px ) {
+    .da-thumbs{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/*-600px width*/
+@media ( max-width: 600px ) {
+    .da-thumbs{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

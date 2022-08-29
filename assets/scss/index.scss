@@ -133,9 +133,13 @@ html {
   background-color: $Black;
   color: $White;
   text-align: center;
-  line-height: 50px;
   cursor: pointer;
   border-radius: 50%;
+
+  i {
+    line-height: 45px;
+
+  }
 }
 
 header {
@@ -328,14 +332,24 @@ header {
   }
 }
 
-#skill {
+#skill, #tops {
   width: 100%;
   min-height: fit-content;
 
-  .skillContainer {
+  .skillContainer,
+  .topsContainer {
     background-color: #F6F6F6;
 
     #skillImg {
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    #topsImg {
       height: 100%;
       overflow: hidden;
 
@@ -396,8 +410,11 @@ header {
             position: absolute;
             height: 24px;
             background-color: #7377ad;
-            animation: PHP 1s linear;
             width: 50%;
+
+            &.php {
+              animation: PHP 1s linear;
+            }
           }
 
           .progressHtml {
@@ -406,8 +423,11 @@ header {
             position: absolute;
             height: 24px;
             background-color: #dd4b25;
-            animation: Html 1s linear;
             width: 100%;
+
+            &.Html {
+              animation: Html 1s linear;
+            }
           }
 
           .progressCss {
@@ -416,8 +436,12 @@ header {
             position: absolute;
             height: 24px;
             background-color: #254bdd;
-            animation: Css 1s linear;
             width: 80%;
+
+            &.css {
+              animation: Css 1s linear;
+
+            }
           }
 
           @keyframes PHP {
@@ -446,6 +470,45 @@ header {
           }
         }
       }
+    }
+
+    .result {
+      border-radius: 8px;
+
+      .rTitle {
+        margin: 15px 0;
+        padding: 0 15px;
+        background-image: linear-gradient(to right, $DarkBlue, $Purple);
+        color: $White;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          margin-top: 5px;
+          font-size: 1.5em;
+        }
+
+        i {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .rDesc {
+        width: 90%;
+        margin: 25px auto;
+
+        p {
+          font-size: 1em;
+          color: $fontColor;
+          line-height: 2;
+        }
+
+      }
+
     }
   }
 }
@@ -516,53 +579,60 @@ header {
 
 }
 
-#achivment{
+#achivment {
   height: fit-content;
   background-image: url("../img/achivment.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   position: relative;
-  &:before{
-    content:"";
+
+  &:before {
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 
   }
 
-  #count{
+  #count {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    .box{
+
+    .box {
       position: relative;
       text-align: center;
       margin: 0 auto;
-      .icon{
+
+      .icon {
         margin: 25px auto;
         width: 58px;
         height: 58px;
         color: $White;
         border-radius: 50%;
-        i{
+
+        i {
           font-size: 3em;
           line-height: 58px;
         }
       }
-      .title{
+
+      .title {
         color: $White;
       }
-      .count{
+
+      .count {
         margin: 25px 0;
         color: $White;
-        h2{
+
+        h2 {
           font-size: 3em;
         }
       }
@@ -570,6 +640,207 @@ header {
   }
 }
 
+#smaples {
+  min-height: fit-content;
+
+  #filtering {
+    .title {
+      text-align: center;
+
+      h1 {
+        font-size: 3em;
+      }
+
+      p {
+        margin: 15px 5px;
+        display: inline-block;
+        font-size: 1em;
+        color: $fontColor;
+      }
+
+      span {
+        display: inline-block;
+        background-color: $Purple;
+        height: 1px;
+        width: 3%;
+      }
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      width: 25%;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid #dddddd;
+      padding: 6px;
+
+      .btn-filter {
+        //background-color: $DarkBlue;
+        color: $Black;
+        transition: 300ms;
+        border: none;
+
+        &:hover {
+          border: none;
+          transform: translateY(-5px);
+        }
+
+        &.active {
+          color: $White;
+          background-color: lighten($DarkBlue, 20%);
+          //outline: 1px solid lighten($DarkBlue , 20%);
+          border: 1px solid lighten($DarkBlue, 20%);
+          border-radius: 25px;
+        }
+
+      }
+    }
+
+    .box {
+      position: relative;
+
+      .img {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        background-color: $White;
+        border: 1px solid #dddddd;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        transition: 300ms;
+        transform: scale(0);
+
+        .title {
+          color: $fontColor;
+          font-size: 1em;
+        }
+
+        a {
+          width: 45px;
+          height: 45px;
+          border: 1px solid #dddddd;
+          margin: 0 auto;
+          border-radius: 50%;
+          text-align: center;
+          color: $Black;
+          transition: 150ms;
+
+          &:hover {
+            background-color: $Purple;
+            color: $White;
+          }
+
+          i {
+            text-align: center;
+            line-height: 42px;
+          }
+        }
+      }
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+#team {
+  min-height: fit-content;
+
+  .profile {
+    margin: 0 auto;
+    width: 250px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: 300ms;
+
+    .profileImg {
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      margin: 15px auto;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .job {
+      font-size: 1.3em;
+      color: $fontColor;
+    }
+
+    .icons {
+      opacity: 0;
+      transition: 300ms;
+
+      a {
+        color: $fontColor;
+        text-decoration: none;
+        font-size: 1.3em;
+        margin: 0 10px;
+
+        i {
+          transition: 300ms;
+
+          &.fa-whatsapp {
+            &:hover {
+              color: #3db74d;
+              transform: translateY(-5px);
+            }
+          }
+
+          &.fa-instagram {
+            &:hover {
+              color: #f60a5f;
+              transform: translateY(-5px);
+
+            }
+          }
+
+          &.fa-github {
+            &:hover {
+              color: $Black;
+              transform: translateY(-5px);
+            }
+          }
+        }
+      }
+
+    }
+
+    &:hover {
+      box-shadow: 0 5px 15px #ddd;
+      transform: translateY(-5px);
+
+      .icons {
+        opacity: 1;
+      }
+    }
+  }
+}
 
 @media(max-width: 1000px) {
   h1 {
@@ -666,4 +937,21 @@ header {
     display: block;
     min-height: 100vh !important;
   }
+
+  #team {
+
+    .profile {
+      width: 100%;
+
+      .icons {
+        a {
+          margin: 0 !important;
+        }
+
+        opacity: 1;
+
+      }
+    }
+  }
+
 }
