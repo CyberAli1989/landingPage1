@@ -22,6 +22,7 @@
     "bootstrap": "^5.2.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.1",
+    "owl.carousel": "^2.3.4",
     "vazirmatn": "^33.0.3"
   }
 }

@@ -136,7 +136,7 @@ $(function () {
             r2 = false;
             r3 = false;
         }
-    })
+    });
     $(".rClose2").on("click", function (e) {
         if(!r2){
             $(".r1").stop().slideUp();
@@ -149,7 +149,7 @@ $(function () {
             r2 = true;
             r3 = false;
         }
-    })
+    });
     $(".rClose3").on("click", function (e) {
         if(!r3){
             $(".r1").stop().slideUp();
@@ -161,6 +161,24 @@ $(function () {
             r3 = true;
             r1 = false;
             r2 = false;
+        }
+    });
+    // slider
+    $('#coments .owl-carousel').owlCarousel({
+        rtl:true,
+        loop:false,
+        nav:true,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
         }
     })
 })

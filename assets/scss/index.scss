@@ -580,9 +580,8 @@ header {
 }
 
 #achivment {
-  height: fit-content;
+  min-height: fit-content;
   background-image: url("../img/achivment.jpg");
-  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -838,6 +837,200 @@ header {
       .icons {
         opacity: 1;
       }
+    }
+  }
+}
+
+#price {
+  width: 100%;
+  min-height: fit-content;
+
+  .container {
+    max-width: 80%;
+  }
+
+  .title {
+    text-align: center;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin: 15px 5px;
+      display: inline-block;
+      font-size: 1em;
+      color: $fontColor;
+    }
+
+    span {
+      display: inline-block;
+      background-color: $Purple;
+      height: 1px;
+      width: 3%;
+    }
+  }
+
+  .active {
+    .box {
+      transform: scale(1.1);
+      background-image: url("../img/price.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      //width: 300px;
+      position: relative;
+      color: $White;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba($DarkBlue, 60%);
+        z-index: -1;
+      }
+
+      .pTitle {
+        color: $White;
+      }
+
+      .price {
+        color: $White;
+
+        &:after {
+          color: #ddd;
+        }
+      }
+
+      button {
+        color: $White;
+
+        &:before {
+          background-color: #f60a5f !important;
+        }
+
+        &:after {
+          background-color: #f60a5f !important;
+        }
+      }
+    }
+  }
+
+  .box {
+
+    overflow: hidden;
+    height: 500px;
+    //width: 300px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    .pTitle {
+      margin: 15px 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 1.2em;
+      color: #000;
+    }
+
+    .price {
+      color: #000;
+      font-size: 1.7em;
+      display: inline-flex;
+      justify-content: center;
+      position: relative;
+
+      &:after {
+        content: "تومان";
+        margin: 0 8px;
+        color: $fontColor;
+        font-size: .7em;
+        line-height: 3;
+      }
+    }
+
+    .duration {
+      font-size: 1.2em;
+    }
+
+    ul {
+      text-align: right;
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1em;
+
+        i {
+          &.fa-check {
+            color: #3db74d;
+          }
+
+          &.fa-close {
+            color: #f60a5f;
+          }
+        }
+      }
+    }
+
+    button {
+      color: #000;
+
+      &:hover {
+        color: $White;
+      }
+    }
+  }
+}
+
+#coments{
+  min-height: 70vh;
+  background-image: url("../img/comments.jpg");
+  .container{
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+  }
+  .comment{
+    margin: 20px auto;
+    width: 70%;
+    .commentImg{
+      width: 58px;
+      height: 58px;
+      overflow: hidden;
+      margin: 15px auto;
+    }
+    .commentTxt{
+      font-size: 1em;
+      color: #000;
+      text-align: center;
+      background-color: rgba($White , 60%);
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      p{
+        line-height: 2;
+      }
+    }
+  }
+  .owl-nav{
+    button{
+      width: 45px;
+      height: 45px;
+      padding: 15px;
+      border-radius: 50%;
+      background-color: #ddd;
+      font-size: 2em;
     }
   }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -529,9 +530,8 @@ header #headContent p {
 }
 
 #achivment {
-  height: fit-content;
+  min-height: fit-content;
   background-image: url("../img/achivment.jpg");
-  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -737,6 +737,167 @@ header #headContent p {
 }
 #team .profile:hover .icons {
   opacity: 1;
+}
+
+#price {
+  width: 100%;
+  min-height: fit-content;
+}
+#price .container {
+  max-width: 80%;
+}
+#price .title {
+  text-align: center;
+}
+#price .title h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+#price .title p {
+  margin: 15px 5px;
+  display: inline-block;
+  font-size: 1em;
+  color: #7F7F7F;
+}
+#price .title span {
+  display: inline-block;
+  background-color: #5F23A5;
+  height: 1px;
+  width: 3%;
+}
+#price .active .box {
+  transform: scale(1.1);
+  background-image: url("../img/price.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  color: #FFFCFF;
+}
+#price .active .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(48, 35, 153, 0.6);
+  z-index: -1;
+}
+#price .active .box .pTitle {
+  color: #FFFCFF;
+}
+#price .active .box .price {
+  color: #FFFCFF;
+}
+#price .active .box .price:after {
+  color: #ddd;
+}
+#price .active .box button {
+  color: #FFFCFF;
+}
+#price .active .box button:before {
+  background-color: #f60a5f !important;
+}
+#price .active .box button:after {
+  background-color: #f60a5f !important;
+}
+#price .box {
+  overflow: hidden;
+  height: 500px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+#price .box .pTitle {
+  margin: 15px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2em;
+  color: #000;
+}
+#price .box .price {
+  color: #000;
+  font-size: 1.7em;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+#price .box .price:after {
+  content: "تومان";
+  margin: 0 8px;
+  color: #7F7F7F;
+  font-size: 0.7em;
+  line-height: 3;
+}
+#price .box .duration {
+  font-size: 1.2em;
+}
+#price .box ul {
+  text-align: right;
+  list-style: none;
+  padding: 0;
+}
+#price .box ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+}
+#price .box ul li i.fa-check {
+  color: #3db74d;
+}
+#price .box ul li i.fa-close {
+  color: #f60a5f;
+}
+#price .box button {
+  color: #000;
+}
+#price .box button:hover {
+  color: #FFFCFF;
+}
+
+#coments {
+  min-height: 70vh;
+  background-image: url("../img/comments.jpg");
+}
+#coments .container {
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+}
+#coments .comment {
+  margin: 20px auto;
+  width: 70%;
+}
+#coments .comment .commentImg {
+  width: 58px;
+  height: 58px;
+  overflow: hidden;
+  margin: 15px auto;
+}
+#coments .comment .commentTxt {
+  font-size: 1em;
+  color: #000;
+  text-align: center;
+  background-color: rgba(255, 252, 255, 0.6);
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+}
+#coments .comment .commentTxt p {
+  line-height: 2;
+}
+#coments .owl-nav button {
+  width: 45px;
+  height: 45px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #ddd;
+  font-size: 2em;
 }
 
 @media (max-width: 1000px) {
