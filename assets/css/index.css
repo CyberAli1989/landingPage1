@@ -862,7 +862,23 @@ header #headContent p {
 
 #coments {
   min-height: 70vh;
+}
+#coments .commentsBg {
   background-image: url("../img/comments.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#coments .commentsBg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 #coments .container {
   display: flex;
@@ -881,10 +897,10 @@ header #headContent p {
 }
 #coments .comment .commentTxt {
   font-size: 1em;
-  color: #000;
   text-align: center;
-  background-color: rgba(255, 252, 255, 0.6);
-  border: 1px solid #ddd;
+  background-color: rgba(255, 252, 255, 0.2);
+  box-shadow: 0 0px 15px rgba(255, 252, 255, 0.4);
+  color: #FFFCFF;
   padding: 15px;
   border-radius: 10px;
 }
@@ -898,6 +914,234 @@ header #headContent p {
   border-radius: 50%;
   background-color: #ddd;
   font-size: 2em;
+}
+
+#blog {
+  min-height: fit-content;
+}
+#blog .title {
+  text-align: center;
+}
+#blog .title h2 {
+  font-size: 3em;
+  color: #000;
+}
+#blog .title span {
+  margin: 0 10px;
+  width: 3%;
+  display: inline-block;
+  height: 1px;
+  background-color: #5F23A5;
+}
+#blog .title p {
+  display: inline-block;
+  color: #7F7F7F;
+  font-size: 1em;
+}
+#blog .box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#blog .box .blogImg {
+  width: 100%;
+  height: 20%;
+  overflow: hidden;
+}
+#blog .box .blogImg img {
+  width: 100%;
+  transition: 300ms;
+}
+#blog .box .blogDesc {
+  padding: 5px 15px;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+#blog .box .blogDesc p {
+  display: inline-block;
+  color: #7F7F7F;
+}
+#blog .box .blogTitle {
+  padding: 0 15px;
+}
+#blog .box .blogTitle a {
+  color: #0E0F26;
+  text-decoration: none;
+  font-size: 1em;
+}
+#blog .box .blogContent {
+  padding: 15px;
+  line-height: 2;
+  color: #7F7F7F;
+  font-size: 1em;
+}
+#blog .box:hover .blogImg img {
+  transform: scale(1.1);
+}
+#blog button {
+  color: #0E0F26;
+  border: 1px solid #5F23A5;
+}
+#blog button:hover {
+  color: #FFFCFF;
+}
+
+#contact {
+  min-height: fit-content;
+}
+#contact .contactImg {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-image: url("../img/skill.jpg");
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+#contact .contactImg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+#contact .contactImg img {
+  width: 100%;
+}
+#contact .contactImg .content {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#contact .contactImg .items {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  color: #FFFCFF;
+  display: flex;
+}
+#contact .contactImg .items .icon {
+  font-size: 2em;
+  margin: 0 20px;
+}
+#contact .contactImg .items .info p {
+  font-size: 1em;
+  line-height: 0.75;
+  padding: 0;
+}
+#contact .contactImg .items .info p:first-child {
+  font-size: 1.2em !important;
+  font-weight: 600;
+}
+#contact .contactImg .items .info p:last-child {
+  color: #b2b2b2;
+}
+#contact .contactImg .items .info.email p {
+  font-size: 1em;
+}
+#contact .contactImg .items .info.email p:nth-child(2) {
+  color: #b2b2b2;
+}
+#contact form {
+  padding: 0 25px;
+  width: 100%;
+}
+#contact form label {
+  width: 100%;
+}
+#contact form label input {
+  width: 100%;
+  height: 48px;
+  margin: 15px 0;
+  border-radius: 10px;
+  padding: 0 5px;
+  border: 0;
+  background-color: #e5e5e5;
+}
+#contact form textarea {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 5px;
+  border: 0;
+  background-color: #e5e5e5;
+}
+#contact form button {
+  margin: 15px auto;
+  width: 45%;
+  height: 48px;
+  color: #0E0F26;
+  border: #5F23A5 1px solid;
+}
+#contact form button:hover {
+  color: #FFFCFF;
+}
+
+footer {
+  min-height: 30vh;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  flex-direction: column;
+  background-color: #04050c;
+}
+footer .logo {
+  width: 58px;
+  height: 58px;
+  margin: 15px auto;
+  overflow: hidden;
+}
+footer .logo img {
+  width: 100%;
+}
+footer .icons {
+  text-align: center;
+  margin: 0 auto;
+}
+footer .icons a {
+  font-size: 1.2em;
+  color: #FFFCFF;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  text-decoration: none;
+  line-height: 48px;
+  transition: 100ms;
+}
+footer .icons a.Instagram:hover {
+  background-color: #f60a5f;
+  border-color: #f60a5f;
+}
+footer .icons a.Whatsapp:hover {
+  background-color: #3db74d;
+  border-color: #3db74d;
+}
+footer .icons a.Telegram:hover {
+  background-color: #254bdd;
+  border-color: #254bdd;
+}
+footer .icons a.gitHub:hover {
+  background-color: #000;
+  border-color: #000;
+}
+footer p {
+  margin: 15px 0;
+  color: #FFFCFF;
 }
 
 @media (max-width: 1000px) {
